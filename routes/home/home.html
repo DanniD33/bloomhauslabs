@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/home/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+</head>
+
+<body>
+<!-- LOADING SCREEN -->
+
+<div id="loading-screen">
+  <div id="progress-bar"></div>
+  <div id="progress-counter">0%</div>
+</div>
+
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+  <h1>
+    BLOOMHAUS LABS
+  </h1>
+  <div class="sun">
+      <div class="vidSection">
+        <!-- The video -->
+        <video autoplay muted loop id="myVideo">
+          <source src="/assets/veins.mp4" type="video/mp4">
+        </video>
+        <div class="portal"></div>
+        <!-- <div class="circle-wrapper">
+          <div class="circle">
+            <svg class="svg" viewBox="0 0 200 200">
+            <defs>
+              <clipPath id="clip">
+                <circle id="clip-circle" r="200" cx="50%" cy="50%" />
+              </clipPath>
+            </defs>
+
+            <image clip-path="url(#clip)" href="https://assets.codepen.io/756881/puppy-australian-shepherd-running.jpeg" preserveAspectRatio="xMidYMid slice" x="0" y="0" width="200" height="200"></image>
+          </svg>
+          </div>
+        </div> -->
+      </div>
+  
+      
+      <div class="semicircle">
+        <h1>
+          Bloomhaus Labs
+        </h1>
+
+      </div>
+    <div class="line"></div>
+  </div>
+  <div class="road">
+    <!-- <video autoplay muted loop id="roadVideo">
+      <source src="/assets/cell.mp4" type="video/mp4">
+    </video> -->
+  </div>  
+</div>
+
+
+<!-- HUGE TEXTS + ABSOLUTE POSITIONING TO RELATIVE POSITIONING -->
+<div class="intro-transition">
+
+  <div class="part1">
+    <p class="sitename"></p>
+    
+    <div class="spacer"></div>
+    
+    <div class="big-text">
+      <p class="fadein">Engineered </p>
+      <p class="fadein">Different by </p>
+      <p class="fadein">Design</p>
+    </div>
+  </div>
+</div>
+  
+
+Built Different by Design
+
+Most agencies specialize in one thing.
+
+We don't.
+
+Our studio was built around a simple idea: businesses don't wake up needing a website. They wake up needing solutions.
+
+Sometimes that solution is a website.
+
+Sometimes it's a custom application, a streamlined workflow, a better customer experience, or a completely new way to connect with people.
+
+We blend strategy, design, development, and creative problem-solving to build tools, experiences, and systems that help businesses grow.
+
+Every project is approached like a case study. We identify the challenge, uncover opportunities, and create solutions tailored to the people who will use them.
+
+Because the best work isn't defined by the platform it's built on.
+
+It's defined by the problem it solves.
+
+<!-- GSAP HORIZONTAL SCROLL -->
+<div class="horizontal-container">
+  <div class="horizontal-wrapper">
+    <div class="horizontal-scroller">
+      <div class="row">
+        <div class="item filled"><p>Most labs specialize in one thing.We don't.</p><a class="link item-link"><span class="link-text"  data-text="A Little Bit About Us">A Little Bit About Us</span></a></div>
+        <div class="item filled"><p>businesses don't wake up needing a website. </p></div>
+        <div class="item big"><p>They wake up needing solutions.</p></div>
+        <div class="item filled"><p>Sometimes it's a custom application, a streamlined workflow, a better customer experience, or a completely new way to connect with people.</p><a class="link item-link"><span class="link-text"  data-text="Learn more">Learn more</span></a></div>
+        <div class="item filled big"><p></p></div>
+        <div class="item"><p>The lab is where we blend strategy, design, development, and creative problem-solving to build tools, experiences, and systems that help businesses grow.</p></div>
+      </div>
+      <div class="row">
+        
+        <div class="item big"><p>Scroll is the new click.</p></div>
+        <div class="item filled"><p>Do you like scrolling forever? Check out our infinite scrolling page. This site fulfills your passion for scrolling. It just won't stop!</p><a class="link item-link"><span class="link-text"  data-text="Check it out">Check it out</span></a></div>
+        <div class="item filled"><p>Fun fact 2: None of these links actually lead anywhere except the last link on this page.</p></div>
+        <div class="item big"><p># I <3 GSAP<p></div>
+        <div class="item filled"><p><b>Tip:</b> Search 'GSAP Horizontal Scroll' in the HTML, CSS, or JS parts of the code.</p></div>
+        <div class="item filled"><p>Gotta go already? That was a short visit. Check back later some time. Ba-bye!</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PRICING CARDS -->
+<div class="cards-container">
+  <div class="cards">
+    <div class="cards-text-container">
+      <div class="cards-text"><h2>ROSE</h2><p>This is for growing businesses who simply desire to increase their online reach</p><p>SINGLE PAGE WEBSITE; A business card but in a website. Take advantage of scroll animations</p><p>This solution may work best for your needs if all you need is a contact form and a simple design</p></div>
+      <div class="cards-text"><h2>LIV</h2><p>This range is for growing businesses who may need a more robust system with a database.
+</p><p> This solution may work best if you need features like seamless payment system or user registration/login</p><p>COMES WITH UP TO 5 PAGES</p></div>
+
+      <div class="cards-text"><h2>BRASS</h2><p>This solution works best for businesses whose primary goal is retention</p><p>You have customers but you desire to balance retaining customers and freeing up some of your time. </p>
+        <!-- <p>Ideal for solutions that require dashboard control center, automated email system (text/email list for announcements), internal tools, inventory management, -Comes with dashboard control center, automated email system (text/email list for announcements), and more.
+      admin dashboards, internal tools, inventory management, and more.</p></div> -->
+      <div class="cards-cta">GET STARTED</div>
+  </div>
+   <div class="cards-image-container">
+      <div class="cards-image"><img class="image" src="/assets/cards.png"><img class="alt" src="/assets/cards.png"></div>
+      <div class="cards-image">
+        <img class="image" src="/assets/zoom.png">
+        <img class="alt" src="/assets/zoom.png">
+      </div>
+      <div class="cards-image"><img class="image" src="/assets/3dcards.png"><img class="alt" src="/assets/3dcards.png"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ZOOM IN -->
+
+<div class="zoom-container">
+  <div class="zoom">
+    <h2 class="zoom-heading"></h2>
+    <div class="zoom-circle"></div>
+    <h3 class="zoom-content">PORTFOLIO</h3>
+    <div class="footer">
+      <p class="footer-content"></p>
+      <a class="footer-content link" href="https://twitter.com/juxtopposed" target="_blank"><span class="link-text"  data-text="Let's connect"></span></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="portal-section">
+  CASE STUDIES
+<!-- <canvas id="portal-canvas"> -->
+
+  <model-viewer 
+  src="/assets/3dlogo.glb" 
+  alt="A description of Bloomhaus Lab's 3D logo model" 
+  camera-controls 
+  auto-rotate 
+  ar>
+</model-viewer>
+<!-- </canvas> -->
+</section>
+
+<section class="case-archive">
+  <h1>CASE FILES</h1>
+</section>
+
+<!-- portal -->
+
+
+
+
+
+
+<!-- portflio -->
+ https://codepen.io/motionharvest/pen/WNQYJyM
+
+
+<script src="/home/home.js"></script>
+
+
+
+
+
+
+</body>
+</html>
