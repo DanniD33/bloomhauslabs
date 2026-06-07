@@ -232,9 +232,19 @@ introTl
   clipPath: "circle(150% at 65% 40%)"
 })
 .to(".part1", {
-  zIndex: -1,
-  duration: 0
+  // zIndex: -1,
+  // duration: 0
+  display:"none"
 });
+// .to("horizontal-wrapper", {
+//   clipPath: "circle(150% at 65% 40%)"
+// }, "<");
+
+
+
+
+
+
 
 
 
@@ -245,16 +255,31 @@ introTl
     container.scrollWidth - document.documentElement.clientWidth;
 
   gsap.to(container, {
-    x: () => -containerWidth,
-    scrollTrigger: {
-      trigger: ".horizontal-wrapper",
-      start: "top top",
-      scrub: 0.5,
-      pin: ".horizontal-container",
-      end: () => "+=" + containerWidth,
-      invalidateOnRefresh: true,
-    }
-  });
+  x: () => -containerWidth,
+  scrollTrigger: {
+    trigger: ".horizontal-wrapper",
+    start: "top top",
+    end: () => "+=" + containerWidth,
+    scrub: 0.5,
+    pin: ".horizontal-container",
+    invalidateOnRefresh: true
+  }
+});
+
+
+
+
+    // gsap.to(container, {
+  //   x: () => -containerWidth,
+  //   scrollTrigger: {
+  //     trigger: ".horizontal-wrapper",
+  //     start: "top top",
+  //     scrub: 0.5,
+  //     pin: ".horizontal-container",
+  //     end: () => "+=" + containerWidth,
+  //     invalidateOnRefresh: true,
+  //   }
+  // });
 
 
 // const zoomTl = gsap.timeline({
@@ -297,18 +322,12 @@ zoomTl
 
 .to(".portal-section", {
   opacity: 1,
-  duration: 1.5
+    scrollTrigger: {
+    trigger: ".portal-section",
+    start: "top top"
+  }
 }, 1)
 
-// .to(tunnelProgress, {
-//   value: 1,
-//   duration: 2,
-//   onUpdate: () => {
-//     // camera.position.z = -tunnelProgress.value * 800;
-//         // console.log("TUNNEL UPDATE");
-
-//   }
-// }, 1.5)
 
 .to(".case-archive", {
   opacity: 1,
@@ -329,105 +348,29 @@ zoomTl
 
 
 
-
-// zoomTl
-//   .to(".zoom-circle", {
-//     scale: 20,
-//     duration: 5
-//   })
-
-//   .to(".zoom-content", {
-//     opacity: 0,
-//     duration: 2
-//   })
-
-//   .to(".portal-section", {
-//     opacity: 1,
-//     duration: 2,
-//     // onStart: () => console.log("PORTAL START"),
-//     backgroundColor: "lime"
-
-//   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   const zoomTl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".zoom",
-//     scrub: true,
-//     start: "top top",
-//     end: "+=1000%",
-//     pin: true,
-//   }
+// gsap.set(".portal-section", {
+//   display: "none"
 // });
 
 
-// zoomTl
-//   .to(".zoom-circle", {
-//     scale: 20
-//   }, 0)
-
-//   .to(".zoom-content", {
-//     opacity: 0
-//   }, 0.5)
-
-//   .to(".portal-section", {
-//     opacity: 1,
-//     onStart: () => console.log("PORTAL START")
-// }, 0);
-//   // 🔥 FINAL SAFETY NET
-//   requestAnimationFrame(() => {
-//     ScrollTrigger.refresh();
-//   });
 
 
+ScrollTrigger.create({
+  trigger: ".horizontal-container",
+  start: "top center",
 
+  onEnter: () => {
+    gsap.set("#myVideo", {
+      display: "none"
+    });
+  },
 
-
-
-
-
-
-
-
-
-
-
-
+  onLeaveBack: () => {
+    gsap.set("#myVideo", {
+      display: "block"
+    });
+  }
+});
 
 
 
