@@ -770,20 +770,26 @@ a {
   color: white;
 }
 
-
-
 .contact-section {
   position:relative;
   min-height: 100vh;
+  background-color: blue;
 }
 
-.intro {
+
+
+
+
+
+
+
+/* .intro {
   min-height: 100vh;
   position: relative;
   z-index: 60;
   width: 100%;
   overflow: hidden;
-  /* background: red; */
+
 }
 
 h1.intro-header-out {
@@ -815,7 +821,6 @@ h1.intro-header-out {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* z-index: 9999; */
   width:300%;
   height: calc(100svh - 7.5px);
   display: flex;
@@ -853,12 +858,6 @@ h1.intro-header-out {
   transform: translate(-50%, -1%);
 }
 
-/* .intro { */
-  /* position:relative; */
-  /* background-color: violet;
-  z-index: 9999; */
-/* } */
-
 @media (max-width: 1000px) {
   section h1 {
     width: 90%;
@@ -867,4 +866,4 @@ h1.intro-header-out {
   .svg-container, .svg-container-2 {
     width: 1000%;
   }
-}
+} */

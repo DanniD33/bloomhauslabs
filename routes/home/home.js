@@ -71,6 +71,52 @@ updateProgress(0);
 document.body.style.overflow = 'hidden';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+// Initialize a new Lenis instance for smooth scrolling
+const lenis = new Lenis();
+
+// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+lenis.on('scroll', ScrollTrigger.update);
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
+
+
+
+
+// document.querySelectorAll('.svg-row svg path').forEach((path) => {
+//   const borderPath = path.cloneNode(true);
+//   const originalWidth = parseInt(path.getAttribute('stroke-width'));
+//   borderPath.setAttribute('stroke', "#0f0f0f");
+//   borderPath.setAttribute('stroke-width', originalWidth * 10);
+//   borderPath.classList.add('border-path');
+//   path.parentElement.insertBefore(borderPath, path);
+// })
+
+// document.querySelectorAll('.svg-container-2 svg').forEach((svg) => {
+//   const viewBox = svg.getAttribute('viewBox');
+//   if (!viewBox) return;
+//   const [x, y, width, height] = viewBox.split(' ').map(Number);
+//   svg.setAttribute('viewBox', `${x} ${y-10} ${width} ${height * 20}`);
+// })
+
+// document.querySelectorAll('.svg-row svg path').forEach((path) => {
+//   const pathLength = path.getTotalLength();
+//   path.style.strokeDasharray = pathLength;
+//   path.style.strokeDashoffset = pathLength;
+// })
+
+
+
+
+
   let progress = 0;
   const increment = 5;
 
@@ -522,3 +568,5 @@ window.addEventListener("load", () => {
     ScrollTrigger.refresh(true);
   }, 1000);
 });
+
+
